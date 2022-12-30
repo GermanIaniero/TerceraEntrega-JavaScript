@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Products</title>
+    <link rel="stylesheet" href="style.css">   
+
+
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+    <header>
+        <h1 id="titulo" class="titulo"   >Shop Isa y Jose</h1>
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+
+        <a href="https://api.whatsapp.com/send?phone=5493512404281" class="btn-wsp" target="_blank">
+            <i class="fa fa-whatsapp icono"></i>
+          </a>
+    </header>   
+
+    
+    <div id="titulo"></div>
+    <div class="container"></div>
+    <button id="buscar">Buscar Producto</button>
+    
+    
+
+<!--este es de mi compañero-->
+
+
+
+    <select id="filtroTalle">
+        <option value="all">Todos</option>
+        <option value="L">Libreria</option>
+        <option value="M">Accesorios</option>
+        <option value="S">Ropa</option>
+        <option value="S">Regalos</option>
+        <option value="S">Adorno</option>
+        <option value="S">Bazar</option>
+    </select>
+
+  
+    <main id="conten-productos">
+
+    </main>
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito">
+                
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+
+
+            
+
+
+        </div>
+    </div>
+
+
+
+    <script defer src="articulos.js"></script>
+    <script defer src="cards.js"></script>
+    <script defer src="index.js"></script>
+    <script defer src="app.js"></script>
+    <script defer src="modal.js"></script>
+   
+</body>
+
+
+
+<footer class="container2 footer myFooter bg-footer text-center">
+    <div class="row mt-3 mb-2">
+
+      <div class="redes col-md-12 ">
+        <h4>Seguinos en nuestras redes</h4>
+        
+      </div>
+
+    </div>
+
+    <p class="col-md-12">© Copyright: IsayJoseIND | Todos los derechos reservados </p>
+  </footer>
+
+
+
+
+</html>
