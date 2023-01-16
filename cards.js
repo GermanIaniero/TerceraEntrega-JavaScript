@@ -1,7 +1,7 @@
 const descuento =0.20
 
-mostrarOfertas= confirm("¿Desea ver nuestras ofertas?")
-console.log("the user require the sale product %s",mostrarOfertas)
+const mostrarOfertas = true
+//console.log("the user require the sale product %s",mostrarOfertas)
 
 function compare( a, b ) {
     if ( a.descrip < b.descrip ){
@@ -11,7 +11,7 @@ function compare( a, b ) {
       return 1;
     }
     return 0;
-  }
+}
 
 function cardsHtml ( array, contenedor, filtrarOferta ) {
 
@@ -30,17 +30,16 @@ function cardsHtml ( array, contenedor, filtrarOferta ) {
             <h2>
                 ${array.oferta?array.precio-(array.precio*(descuento%100)):array.precio}
             </h2>
-            <button>
-                ♥
-            </button>
+            <button>Agregar al Carrito</button>
         `
         contenedor.appendChild(card)
     })    
 }
 
 // no va esto
+
 const contenedor = document.querySelector(".container")
-const listaProductos =isayjose.slice().filter(stockProductos => stockProductos.oferta === mostrarOfertas);
+const listaProductos =stockProductos.slice().filter(stockProductos => stockProductos.oferta === mostrarOfertas);
 listaProductos.sort(compare)
 
 if(mostrarOfertas){
@@ -51,7 +50,7 @@ if(mostrarOfertas){
 
 cardsHtml(listaProductos,contenedor,mostrarOfertas)
 
-function buscarProducto(){
+/*function buscarProducto(){
     let productoBuscado = prompt("Ingrese el nombre del producto a buscar");
     const listaProductosConsulta =listaProductos.slice().filter(producto => producto.descrip.toLowerCase() === productoBuscado.toLowerCase());
     if (listaProductosConsulta.length>0){
@@ -68,6 +67,4 @@ function buscarProducto(){
 
 }
 
-document.getElementById('buscar').addEventListener("click", buscarProducto);
-
-
+document.getElementById('buscar').addEventListener("click", buscarProducto); */

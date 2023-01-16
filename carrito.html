@@ -7,9 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shop Products</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-  <!--<link rel="stylesheet" type="text/css" href="lib/sweet-alert.css"> -->
-
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
 
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -116,7 +114,7 @@
 <header>
 
   <h1 id="titulo" class="titulo">Shop Isa y Jose</h1>
-  <!--<button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button> -->
+ <!-- <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button> -->
 
   <a href="https://api.whatsapp.com/send?phone=5493512404281" class="btn-wsp" target="_blank">
     <i class="fa fa-whatsapp icono"></i>
@@ -131,7 +129,7 @@
 
 </header>
 
-<!-- <script>
+<script>
   const progressBar = document.querySelector("#progressBar");
   let totalPageHeight = document.body.scrollHeight - window.innerHeight;
   window.onscroll = () => {
@@ -139,7 +137,7 @@
     progressBar.style.height = `${newProgressHeight}%`;
     progressBar.style.opacity = `${newProgressHeight}%`;
   };
-</script>  -->
+</script>
 
 
 <a id="darkmode" href="javascript:void(0)">Modo oscuro</a>
@@ -154,19 +152,12 @@
 
 
 <div id="titulo"></div>
-<div class="contenedor"></div>
+<div class="container"></div>
 <!--<button id="buscar">Buscar Producto</button> -->
 
 
 
 
-<form id="filtroProducto">
-  <label>
-    <input type="text" id="input-busqueda" placeholder="Busque la categoria...">
-  </label>
-  <label>
-    <input type="submit" value="Buscar">
-  </label>
 
 
 
@@ -235,130 +226,41 @@
 
 
 </head>
-
 <body>
-  <!-- Swiper -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img
-          src="https://www.rotularte.com.ar/wp-content/uploads/stickers-laptop-plncha-personalizadas.jpg" )></div>
-      <div class="swiper-slide"><img src="https://vmglobalstore.com/wp-content/uploads/2021/07/ACC35_1.jpg" )></div>
-      <div class="swiper-slide"><img
-          src="https://ollanegra.com.ar/wp-content/uploads/2021/08/cucu-sapiens-portada-2000x500.jpg" )></div>
-      <div class="swiper-slide"><img
-          src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/famosos-gorras-animales-gorrin-bros-1547555554.jpg"
-          )></div>
-      <div class="swiper-slide"><img src="https://vmglobalstore.com/wp-content/uploads/2021/07/ACC35_1.jpg" )></div>
-    </div>
+    <a href="index.html">Volver Pagina Principal</a>
+    <button id="borrar-productos">BORRAR TODO EL CARRITO</button>
 
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
+    <main id="conten-productos">
+    <div class="producto">
 
-  </div>
+    </div> 
+    </main>
+    <script src="carrito.js"></script>
 
- 
+    <button class="boton-agregar" onclick="HacerClick()">Pagar</button>
 
-  </div>
-  
-  </div>
+    <!--<script>
+      function miFunc() {
+        alert('Se ha dado clic al botón!');
+      }
+    </script> -->
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  </script>
-  
-  <a href="carrito.html">VER MI CARRITO</a>
-  <button id="borrar-productos">BORRAR TODO EL CARRITO</button>
- 
-  <div class="container">
- 
-  </div>
-  <main id="conten-productos">
-
-  </main>
-
-  <div class="modal-contenedor">
-    <div class="modal-carrito">
-      <h3>Carrito</h3>
-      <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-      <div id="carrito">
-
-      </div>
-      <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
-      <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+    <script src="lib/sweet-alert.min.js"></script>
 
 
 
-
-
-    </div>
-  </div>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 
 
-
-
-
-
- 
-
-
-  <!--<script src="lib/sweet-alert.min.js"></script> -->
-
-
-
-  
-
-
-
-  <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
 
 
 
-  
-
-
-
-
-
-
-
- <!--Borrar carrito Carola-->
-
- <a href="carrito.html">VER MI CARRITO</a>
- <button id="borrar-productos">BORRAR TODO EL CARRITO</button>
-
- <div class="container">
-
- </div>
- 
-
-<!--Hasta aca carrito Carola-->
-
-
-
-<script defer src="final.js"></script>
+  <script defer src="final.js"></script>
 
 
 
@@ -367,46 +269,35 @@
 
 
   <script defer src="articulos.js"></script>
-  <script defer src="cards.js"></script> 
+  <script defer src="cards.js"></script>
   <script defer src="index.js"></script>
-  <!--<script defer src="app.js"></script> 
-  <script defer src="modal.js"></script>-->
+  <script defer src="app.js"></script>
+  <script defer src="modal.js"></script>
   <script src="darkmode.js"></script>
-
-
-
-
 </body>
 
-
 <footer class="container2 footer myFooter bg-footer text-center">
-  <div class="row mt-3 mb-2">
+    <div class="row mt-3 mb-2">
 
-    <div class="redes col-md-12 ">
-      <h4>Seguinos en nuestras redes</h4>
-      
-      <div class="imgfooter">
+      <div class="redes col-md-12 ">
+        <h4>Seguinos en nuestras redes</h4>
+        
+        <div class="imgfooter">
 
-        <a href="https://www.facebook.com/IsayJoseIND">
-          <img src="/img/facebook.webp" alt="Facebook" width="5%" height="auto"></a>
+          <a href="https://www.facebook.com/IsayJoseIND">
+            <img src="/img/facebook.webp" alt="Facebook" width="5%" height="auto"></a>
 
-          <a href="https://www.instagram.com/isayjoseind/">
-            <img src="/img/instagram.webp" alt="Instagram" width="5%" height="auto"></a>
+            <a href="https://www.instagram.com/isayjoseind/">
+              <img src="/img/instagram.webp" alt="Instagram" width="5%" height="auto"></a>
 
-          <a href="https://www.youtube.com/channel/UC07eWMNPq87-roVL60gIRyw">
-            <img src="/img/youtube.webp" alt="Youtube" width="5%" height="auto"></a>
+            <a href="https://www.youtube.com/channel/UC07eWMNPq87-roVL60gIRyw">
+              <img src="/img/youtube.webp" alt="Youtube" width="5%" height="auto"></a>
+        </div>
+        <h4>© Copyright: IsayJoseIND | Todos los derechos reservados</h4>    
       </div>
-      <h4>© Copyright: IsayJoseIND | Todos los derechos reservados</h4>    
+
     </div>
 
-  </div>
-
-  
-
-
-</footer>
-
-
-
-
+    
+  </footer>
 </html>

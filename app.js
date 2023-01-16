@@ -38,7 +38,7 @@ stockProductos.forEach((producto) => {
     <p>Producto: ${producto.producto}</p>
     <p class="precioProducto">Precio:$ ${producto.precio}</p>
     <p style="color:red;">Descuento: ${producto.descuento} %</p>
-    <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+    <button id="agregar${producto.id}" class="boton-agregar" >Agregar <i class="fas fa-shopping-cart"></i></button>
 
     `
     contenedorProductos.appendChild(div)
@@ -121,12 +121,14 @@ const actualizarCarrito = () => {
         localStorage.setItem('carrito', JSON.stringify(carrito))
 
     })
+/*
+
     //SEPTIMO PASO
     contadorCarrito.innerText = carrito.length // actualizamos con la longitud del carrito.
     //OCTAVO PASO
     console.log(carrito)
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
     //Por cada producto q recorro en mi carrito, al acumulador le suma la propiedad precio, con el acumulador
-    //empezando en 0.
+    //empezando en 0.*/
 
 }
